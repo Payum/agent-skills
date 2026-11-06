@@ -14,6 +14,7 @@ when your request matches it.
 <!-- skills:start -->
 | Skill | What it does |
 |-------|--------------|
+| [`payum-migrate-gateway`](skills/payum-migrate-gateway/) | Ports a Payum 1.x gateway package to the 2.x gateway, config and handler structure, in one go or one piece at a time, keeping backward compatibility |
 <!-- skills:end -->
 
 ## Install

@@ -1,0 +1,26 @@
+{
+  "skill_name": "payum-migrate-gateway",
+  "evals": [
+    {
+      "id": 1,
+      "name": "sofort-full-bc",
+      "prompt": "Port the Sofort gateway in src/Payum/Sofort to the Payum 2 gateway structure (gateway class, config, handlers). We ship it in a 2.x minor so nothing that works for people today may break. Run its tests when you're done.",
+      "expected_output": "SofortGateway + SofortConfig + capture/refund/sync/notify handlers; API takes the config; status mapping moved into results with the status action kept for in-flight payments; factory kept and deprecated, routing to handlers; details keys unchanged; Sofort tests pass; metadata researched.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "paypal-ec-cancel-only",
+      "prompt": "paypal express checkout (src/Payum/Paypal/ExpressCheckout/Nvp) has way too many actions to do in one go. can you move just the cancel operation over to a v2 handler for now? leave everything else as actions",
+      "expected_output": "Only cancel is ported: one CancelHandler covering both CancelAction and CancelRecurringPaymentsProfileAction (branching on details shape), bridged into the existing factory via HandlerToActionAdapter (or a gateway class with DeclaresActions); other actions untouched; existing tests pass; new handler tests.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "offline-full-bc-break",
+      "prompt": "We're releasing payum/offline 3.0 as a new major, so breaking BC is fine. Convert src/Payum/Offline completely to the v2 architecture and get rid of the old factory/actions.",
+      "expected_output": "OfflineGateway + OfflineConfig + capture/authorize/refund/payout handlers (status from results), factory, actions, status and convert actions removed, upgrade note listing every break, tests rewritten for handlers and passing, check_gateway passes.",
+      "files": []
+    }
+  ]
+}
