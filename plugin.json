@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "payum",
+  "version": "0.1.0",
+  "description": "Agent skills for integrating Payum, the framework-agnostic PHP payment library.",
+  "author": {
+    "name": "Payum",
+    "url": "https://github.com/Payum"
+  },
+  "homepage": "https://github.com/Payum/agent-skills",
+  "repository": "https://github.com/Payum/agent-skills",
+  "license": "MIT",
+  "keywords": ["payum", "php", "payments", "symfony", "laravel"]
+}

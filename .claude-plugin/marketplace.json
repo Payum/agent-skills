@@ -1,0 +1,16 @@
+{
+  "name": "payum",
+  "owner": {
+    "name": "Payum",
+    "url": "https://github.com/Payum"
+  },
+  "plugins": [
+    {
+      "name": "payum",
+      "source": "./",
+      "description": "Agent skills for integrating Payum, the framework-agnostic PHP payment library.",
+      "homepage": "https://github.com/Payum/agent-skills",
+      "license": "MIT"
+    }
+  ]
+}
